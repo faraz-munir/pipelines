@@ -6,8 +6,6 @@ pipeline {
  echo 'faraz'
  
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/pgac_lib_eureka'
-
-
  
 }
 }
