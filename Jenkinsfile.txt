@@ -4,6 +4,7 @@ pipeline {
  stage('Build') { 
  steps { 
  echo 'faraz'
+ checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/pgac_eureka']]])
  
  
  
