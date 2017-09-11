@@ -17,7 +17,7 @@ pipeline {
  
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/pgac_lib_eureka'
  
- sh '$ /bin/sh -xe /tmp/jenkins5277211277599498809.sh'
+ sh 'packer build packer.json'
 
  
 }
