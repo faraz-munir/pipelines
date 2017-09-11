@@ -7,12 +7,17 @@ pipeline {
   
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/pgac_lib_eureka'
  
+ 
   
 }
 }
  stage('Test'){
  steps {
  echo 'helloworld'
+ 
+ sh 'packer build packer.json'
+
+ 
 }
 }
  stage('Deploy') {
