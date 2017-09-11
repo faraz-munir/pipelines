@@ -15,6 +15,8 @@ pipeline {
  steps {
  echo 'helloworld'
  
+ git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/pgac_lib_eureka'
+ 
  sh 'packer build packer.json'
 
  
