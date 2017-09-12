@@ -25,6 +25,7 @@ pipeline {
  
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/terraform'
 
+ sh 'mvn clean'
  
 }
 }
