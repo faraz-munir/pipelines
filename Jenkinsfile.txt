@@ -22,7 +22,10 @@ pipeline {
 }
  stage('Deploy') {
  steps {
- echo 'helloworld'
+ 
+ git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/terraform'
+
+ 
 }
 }
 }
