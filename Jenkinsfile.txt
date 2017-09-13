@@ -52,7 +52,7 @@ Jenkins server Variables (Temporary)
  sh 'export JENKINS_USER="admin"'
  sh 'export JENKINS_PASSWORD="admin"'
  
-Nodes Back Online 
+Nodes back online 
  
  sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Create_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD; rm -f jenkins-cli.jar;'
  
