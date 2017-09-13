@@ -25,19 +25,19 @@ pipeline {
  
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/terraform'
  
- # Jenkins Server Variables (Temporary)
+
  
  sh 'export JENKINS_SERVER=http://localhost:8080'
  sh 'export JENKINS_USER="admin"'
  sh 'export JENKINS_PASSWORD="admin"'
  
- # Take Build Nodes Offline
+
  
  sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && \java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Destroy_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD;rm -f jenkins-cli.jar;'
  sh 'sleep 30;'
 }
   steps {
- # Running Terraform Infrastructure job on "Master"
+ 
  
  sh 'source ~/.bash_profile'
  sh 'cd "/var/lib/jenkins/workspace/Terraform/environments/development-virginia" && terraform --version'
@@ -49,13 +49,13 @@ pipeline {
 }
   steps {
            
- # Jenkins Server Variables (Temporary)
+ 
  
  sh 'export JENKINS_SERVER=http://localhost:8080'
  sh 'export JENKINS_USER="admin"'
  sh 'export JENKINS_PASSWORD="admin"'
  
- # Bring Build Nodes Back Online
+ 
  
  sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && \ java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Create_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD; rm -f jenkins-cli.jar;'
  
