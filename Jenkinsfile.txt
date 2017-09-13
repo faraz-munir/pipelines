@@ -25,13 +25,13 @@ pipeline {
  
  git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/terraform'
  
-//Jenkins Server Variables (Temporary)
+
  
  sh 'export JENKINS_SERVER=http://localhost:8080'
  sh 'export JENKINS_USER="admin"'
  sh 'export JENKINS_PASSWORD="admin"'
  
-Nodes Offline
+
  
  sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Destroy_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD;rm -f jenkins-cli.jar;'
  sh 'sleep 30;'
