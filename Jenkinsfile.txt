@@ -33,7 +33,7 @@ pipeline {
  
 
  
- sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && \java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Destroy_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD;rm -f jenkins-cli.jar;'
+ sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && \ java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Destroy_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD;rm -f jenkins-cli.jar;'
  sh 'sleep 30;'
 }
   steps {
