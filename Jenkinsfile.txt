@@ -46,7 +46,7 @@ pipeline {
  sh 'terraform apply'
  sh 'sleep 30;'
  
-Jenkins Server Variables (Temporary)  
+Jenkins server Variables (Temporary)  
  
  sh 'export JENKINS_SERVER=http://localhost:8080'
  sh 'export JENKINS_USER="admin"'
