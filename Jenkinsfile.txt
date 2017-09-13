@@ -35,8 +35,7 @@ pipeline {
  
  sh 'wget "$JENKINS_SERVER/jnlpJars/jenkins-cli.jar" && java -jar jenkins-cli.jar -s $JENKINS_SERVER/ build Destroy_Nodes --username $JENKINS_USER --password $JENKINS_PASSWORD;rm -f jenkins-cli.jar;'
  sh 'sleep 30;'
-}
-  steps {
+
  
  
  sh 'source ~/.bash_profile'
@@ -46,10 +45,7 @@ pipeline {
  sh 'terraform plan'
  sh 'terraform apply'
  sh 'sleep 30;'
-}
-  steps {
-           
- 
+  
  
  sh 'export JENKINS_SERVER=http://localhost:8080'
  sh 'export JENKINS_USER="admin"'
