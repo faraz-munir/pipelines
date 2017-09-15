@@ -23,7 +23,7 @@ pipeline {
  stage('Deploy') {
  steps {
  
- git credentialsId: 'CI-BitBucket', url: 'https://ITBitbucketSystem@bitbucket.org/pgac/terraform'
+ git credentialsId: 'CI-BitBucket', url: 'https://faraz-123@bitbucket.org/pgac/pgac_terraform.git'
  
 
  
